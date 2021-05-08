@@ -20,17 +20,18 @@ namespace student_manage
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-            //this.CenterToScreen();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string inputUsername = this.textBox1.Text;
-            string inputPassword = this.textBox2.Text;
-            //MessageBox.Show(input_password);
+            string inputUsername = this.textBox1.Text.Trim();
+            string inputPassword = this.textBox2.Text.Trim();
             if(inputUsername == username && inputPassword == password)
             {
                 this.Close();
+            }else{
+                MessageBox.Show("用户名或密码错误！");  
             }
         }
     }
