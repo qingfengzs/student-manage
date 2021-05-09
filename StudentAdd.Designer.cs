@@ -46,6 +46,10 @@ namespace student_manage
             this.mathInput = new System.Windows.Forms.TextBox();
             this.computerInput = new System.Windows.Forms.TextBox();
             this.englishInput = new System.Windows.Forms.TextBox();
+            this.usernameInput = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.passwordInput = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -72,7 +76,7 @@ namespace student_manage
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(114, 109);
+            this.label3.Location = new System.Drawing.Point(114, 196);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 27);
             this.label3.TabIndex = 2;
@@ -82,7 +86,7 @@ namespace student_manage
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(114, 153);
+            this.label4.Location = new System.Drawing.Point(114, 240);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 27);
             this.label4.TabIndex = 3;
@@ -92,7 +96,7 @@ namespace student_manage
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(74, 194);
+            this.label5.Location = new System.Drawing.Point(74, 281);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 27);
             this.label5.TabIndex = 4;
@@ -102,7 +106,7 @@ namespace student_manage
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(34, 231);
+            this.label6.Location = new System.Drawing.Point(34, 318);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(132, 27);
             this.label6.TabIndex = 5;
@@ -112,7 +116,7 @@ namespace student_manage
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(12, 274);
+            this.label7.Location = new System.Drawing.Point(12, 361);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(152, 27);
             this.label7.TabIndex = 6;
@@ -122,7 +126,7 @@ namespace student_manage
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(74, 311);
+            this.label8.Location = new System.Drawing.Point(74, 398);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(92, 27);
             this.label8.TabIndex = 7;
@@ -131,7 +135,7 @@ namespace student_manage
             // cancelBtn
             // 
             this.cancelBtn.Cursor = System.Windows.Forms.Cursors.Default;
-            this.cancelBtn.Location = new System.Drawing.Point(69, 379);
+            this.cancelBtn.Location = new System.Drawing.Point(73, 451);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(95, 34);
             this.cancelBtn.TabIndex = 8;
@@ -141,7 +145,7 @@ namespace student_manage
             // 
             // addBtn
             // 
-            this.addBtn.Location = new System.Drawing.Point(253, 379);
+            this.addBtn.Location = new System.Drawing.Point(257, 451);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(98, 34);
             this.addBtn.TabIndex = 9;
@@ -182,51 +186,90 @@ namespace student_manage
             // 
             // nameInput
             // 
-            this.nameInput.Location = new System.Drawing.Point(192, 111);
+            this.nameInput.Location = new System.Drawing.Point(190, 196);
             this.nameInput.Name = "nameInput";
             this.nameInput.Size = new System.Drawing.Size(141, 23);
             this.nameInput.TabIndex = 11;
             // 
             // majorInput
             // 
-            this.majorInput.Location = new System.Drawing.Point(190, 158);
+            this.majorInput.Location = new System.Drawing.Point(190, 245);
             this.majorInput.Name = "majorInput";
             this.majorInput.Size = new System.Drawing.Size(141, 23);
             this.majorInput.TabIndex = 12;
             // 
             // phoneInput
             // 
-            this.phoneInput.Location = new System.Drawing.Point(190, 198);
+            this.phoneInput.Location = new System.Drawing.Point(190, 285);
             this.phoneInput.Name = "phoneInput";
             this.phoneInput.Size = new System.Drawing.Size(141, 23);
             this.phoneInput.TabIndex = 13;
             // 
             // mathInput
             // 
-            this.mathInput.Location = new System.Drawing.Point(190, 235);
+            this.mathInput.Location = new System.Drawing.Point(190, 322);
             this.mathInput.Name = "mathInput";
             this.mathInput.Size = new System.Drawing.Size(141, 23);
             this.mathInput.TabIndex = 14;
             // 
             // computerInput
             // 
-            this.computerInput.Location = new System.Drawing.Point(193, 278);
+            this.computerInput.Location = new System.Drawing.Point(190, 365);
             this.computerInput.Name = "computerInput";
             this.computerInput.Size = new System.Drawing.Size(141, 23);
             this.computerInput.TabIndex = 15;
             // 
             // englishInput
             // 
-            this.englishInput.Location = new System.Drawing.Point(193, 315);
+            this.englishInput.Location = new System.Drawing.Point(190, 402);
             this.englishInput.Name = "englishInput";
             this.englishInput.Size = new System.Drawing.Size(141, 23);
             this.englishInput.TabIndex = 16;
+            // 
+            // usernameInput
+            // 
+            this.usernameInput.Location = new System.Drawing.Point(190, 110);
+            this.usernameInput.Name = "usernameInput";
+            this.usernameInput.Size = new System.Drawing.Size(141, 23);
+            this.usernameInput.TabIndex = 18;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(114, 110);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 27);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "用户名";
+            // 
+            // passwordInput
+            // 
+            this.passwordInput.Location = new System.Drawing.Point(190, 157);
+            this.passwordInput.Name = "passwordInput";
+            this.passwordInput.PasswordChar = '*';
+            this.passwordInput.Size = new System.Drawing.Size(141, 23);
+            this.passwordInput.TabIndex = 20;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(114, 157);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(58, 27);
+            this.label10.TabIndex = 19;
+            this.label10.Text = " 密码";
             // 
             // StudentAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(421, 450);
+            this.ClientSize = new System.Drawing.Size(421, 515);
+            this.Controls.Add(this.passwordInput);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.usernameInput);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.englishInput);
             this.Controls.Add(this.computerInput);
             this.Controls.Add(this.mathInput);
@@ -271,5 +314,10 @@ namespace student_manage
         private System.Windows.Forms.TextBox mathInput;
         private System.Windows.Forms.TextBox computerInput;
         private System.Windows.Forms.TextBox englishInput;
+        private System.Windows.Forms.TextBox usernameInput;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox passwordInput;
     }
 }

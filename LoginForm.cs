@@ -32,11 +32,13 @@ namespace student_manage
             if (inputUsername == "")
             {
                 MessageBox.Show("用户名不能为空");
+                return;
             }
 
             if (inputPassword.Length < 6 || inputPassword.Length > 30)
             {
                 MessageBox.Show("密码长度为6-30位");
+                return;
             }
 
             MySqlConnection conn = new MySqlConnection(DatabaseConfig.connectStr);
@@ -74,6 +76,18 @@ namespace student_manage
         {
             string inputUsername = this.usernameInput.Text.Trim();
             string inputPassword = this.passwordInput.Text.Trim();
+
+            if (inputUsername == "")
+            {
+                MessageBox.Show("用户名不能为空");
+                return;
+            }
+
+            if (inputPassword.Length < 6 || inputPassword.Length > 30)
+            {
+                MessageBox.Show("密码长度为6-30位");
+                return;
+            }
 
             MySqlConnection conn = new MySqlConnection(DatabaseConfig.connectStr);
             try
