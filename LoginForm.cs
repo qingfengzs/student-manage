@@ -29,9 +29,17 @@ namespace student_manage
             string inputUsername = this.usernameInput.Text.Trim();
             string inputPassword = this.passwordInput.Text.Trim();
 
-            String connetStr = "server=127.0.0.1;port=3306;user=root;password=123456; database=student_manage;";
-            // server=127.0.0.1/localhost 代表本机，端口号port默认是3306可以不写
-            MySqlConnection conn = new MySqlConnection(connetStr);
+            if (inputUsername == "")
+            {
+                MessageBox.Show("用户名不能为空");
+            }
+
+            if (inputPassword.Length < 6 || inputPassword.Length > 30)
+            {
+                MessageBox.Show("密码长度为6-30位");
+            }
+
+            MySqlConnection conn = new MySqlConnection(DatabaseConfig.connectStr);
             try
             {
                 conn.Open();//打开通道，建立连接，可能出现异常,使用try catch语句
@@ -67,9 +75,7 @@ namespace student_manage
             string inputUsername = this.usernameInput.Text.Trim();
             string inputPassword = this.passwordInput.Text.Trim();
 
-            String connetStr = "server=127.0.0.1;port=3306;user=root;password=123456; database=student_manage;";
-            // server=127.0.0.1/localhost 代表本机，端口号port默认是3306可以不写
-            MySqlConnection conn = new MySqlConnection(connetStr);
+            MySqlConnection conn = new MySqlConnection(DatabaseConfig.connectStr);
             try
             {
                 conn.Open();//打开通道，建立连接，可能出现异常,使用try catch语句
