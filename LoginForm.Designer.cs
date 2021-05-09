@@ -32,10 +32,10 @@ namespace student_manage
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.usernameInput = new System.Windows.Forms.TextBox();
+            this.passwordInput = new System.Windows.Forms.TextBox();
+            this.studentLoginBtn = new System.Windows.Forms.Button();
+            this.teacherLoginBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -67,48 +67,52 @@ namespace student_manage
             this.label3.TabIndex = 2;
             this.label3.Text = "密码：";
             // 
-            // textBox1
+            // usernameInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(323, 164);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(212, 44);
-            this.textBox1.TabIndex = 3;
+            this.usernameInput.Location = new System.Drawing.Point(323, 164);
+            this.usernameInput.Name = "usernameInput";
+            this.usernameInput.PlaceholderText = "请输入用户名";
+            this.usernameInput.Size = new System.Drawing.Size(212, 44);
+            this.usernameInput.TabIndex = 3;
             // 
-            // textBox2
+            // passwordInput
             // 
-            this.textBox2.Location = new System.Drawing.Point(323, 237);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(212, 44);
-            this.textBox2.TabIndex = 4;
+            this.passwordInput.Location = new System.Drawing.Point(323, 237);
+            this.passwordInput.Name = "passwordInput";
+            this.passwordInput.PasswordChar = '*';
+            this.passwordInput.PlaceholderText = "请输入密码";
+            this.passwordInput.Size = new System.Drawing.Size(212, 44);
+            this.passwordInput.TabIndex = 4;
             // 
-            // button1
+            // studentLoginBtn
             // 
-            this.button1.Location = new System.Drawing.Point(253, 312);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 43);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "注册";
-            this.button1.UseVisualStyleBackColor = true;
+            this.studentLoginBtn.Location = new System.Drawing.Point(254, 312);
+            this.studentLoginBtn.Name = "studentLoginBtn";
+            this.studentLoginBtn.Size = new System.Drawing.Size(148, 43);
+            this.studentLoginBtn.TabIndex = 6;
+            this.studentLoginBtn.Text = "学生登录";
+            this.studentLoginBtn.UseVisualStyleBackColor = true;
+            this.studentLoginBtn.Click += new System.EventHandler(this.studentLoginBtn_Click);
             // 
-            // button2
+            // teacherLoginBtn
             // 
-            this.button2.Location = new System.Drawing.Point(444, 312);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(119, 43);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "登录";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.teacherLoginBtn.Location = new System.Drawing.Point(454, 312);
+            this.teacherLoginBtn.Name = "teacherLoginBtn";
+            this.teacherLoginBtn.Size = new System.Drawing.Size(157, 43);
+            this.teacherLoginBtn.TabIndex = 7;
+            this.teacherLoginBtn.Text = "教师登录";
+            this.teacherLoginBtn.UseVisualStyleBackColor = true;
+            this.teacherLoginBtn.Click += new System.EventHandler(this.teacherLoginBtn_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(18F, 38F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.teacherLoginBtn);
+            this.Controls.Add(this.studentLoginBtn);
+            this.Controls.Add(this.passwordInput);
+            this.Controls.Add(this.usernameInput);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -126,9 +130,11 @@ namespace student_manage
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox usernameInput;
+        private System.Windows.Forms.TextBox passwordInput;
+        private System.Windows.Forms.Button studentLoginBtn;
+        private System.Windows.Forms.Button teacherLoginBtn;
+        private System.Windows.Forms.TextBox username;
+        private System.Windows.Forms.TextBox password;
     }
 }
